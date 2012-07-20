@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Clamav-bytecode-compiler : ClamAV ByteCode Compiler" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Clamav-bytecode-compiler</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/vrtadmin/clamav-bytecode-compiler">View on GitHub</a>
+
+          <h1 id="project_title">Clamav-bytecode-compiler</h1>
+          <h2 id="project_tagline">ClamAV ByteCode Compiler</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/vrtadmin/clamav-bytecode-compiler/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/vrtadmin/clamav-bytecode-compiler/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p>See docs/user/clambc-user.pdf, chapter 1 "Installation".</p>
+
+<h2>Getting the bytecode compiler:</h2>
+
+<p>git clone <a href="https://github.com/vrtadmin/clamav-bytecode-compiler">https://github.com/vrtadmin/clamav-bytecode-compiler</a></p>
+
+<h2>Quick start for building:</h2>
+
+<p>Check that your compiler version is not listed as a broken compiler here:
+<a href="http://llvm.org/docs/GettingStarted.html#brokengcc">http://llvm.org/docs/GettingStarted.html#brokengcc</a></p>
+
+<p>$ mkdir obj
+$ cd obj
+$ ../llvm/configure --enable-optimized --enable-targets=host-only --disable-bindings --prefix=/usr/local/clamav
+$ make clambc-only -j4
+$ make install-clambc -j8</p>
+
+<h2>For building and running tests:</h2>
+
+<p>$ mkdir obj
+$ cd obj
+$ ../llvm/configure --enable-optimized --enable-targets=host-only --disable-bindings --prefix=/usr/local/clamav
+$ make clambc-only -j4
+$ make -j4
+$ make check-all</p>
+
+<p>See docs/user/clambc-user.pdf, section "1.3 Building" if build fails.</p>
+
+<h2>Staying up-to-date:</h2>
+
+<p>git pull</p>
+
+<h2>Using a specific release:</h2>
+
+<p>$ git tag|grep ^clambc
+clambc-0.10
+$ git checkout clambc-0.10</p>
+
+<h2>Verifying signature on tag:</h2>
+
+<ol>
+<li>Get my GPG key (clamav.net/gpg/edwin.gpg)</li>
+<li>Verify the tag:
+$ git tag -v clambc-0.10</li>
+</ol><p>type commit
+tag clambc-0.10
+tagger Török Edvin <a href="mailto:edwin@clamav.net">edwin@clamav.net</a> 1268418118 +0200</p>
+
+<p>First public release of the ClamAV Bytecode Compiler.
+gpg: Signature made Fri 12 Mar 2010 07:58:41 PM EET using RSA key ID 5379965D
+gpg: Good signature from "Török Edvin <a href="mailto:edwin@clamav.net">edwin@clamav.net</a>"
+gpg:                 aka "Török Edvin <a href="mailto:edwintorok@gmail.com">edwintorok@gmail.com</a>"</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Clamav-bytecode-compiler maintained by <a href="https://github.com/vrtadmin">vrtadmin</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
